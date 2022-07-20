@@ -1,0 +1,56 @@
+<div id="about" *ngIf="show">
+	<h2> {{username}} </h2>
+	<p [ngClass]="{'big' : size == 'big', 'small' : size == 'small'}">
+		La difesa delle balene caratterizza la nostra storia: nel 1975 Greenpeace lanciò la sua campagna contro la
+		caccia alle balene, affrontando le baleniere in mare aperto, fermando gli arpioni con i gommoni e portando per
+		la prima volta le immagini di questa terribile e inaccettabile caccia nelle case della gente. Ritrovatasi faccia
+		a faccia con la realtà della caccia commerciale alle balene, l’opinione pubblica iniziò a reagire e protestare
+		contro le baleniere. E così nel 1982 l’IWC (la Commissione Baleniera Internazionale (ovvero organismo
+		internazionale istituito per tutelare le popolazioni di cetacei) approvò una moratoria alla caccia commerciale
+		delle balene, in vigore dal 19 86.
+
+		Nonostante il divieto e il fatto che la specie sia tuttora minacciata di estinzione, l’IWC non è ancora stata in
+		grado di fermare le nazioni baleniere: Norvegia, Islanda e Giappone continuano a violare ogni anno la moratoria,
+		con la giustificazione di fare una caccia a “scopi scientifici”. Una scappatoia inaccettabile al divieto di
+		caccia che di scientifico non ha niente e che di fatto consente ogni anni a questi Paesi di uccidere centinaia
+		di balene nell’area.
+
+		Ma la caccia commerciale purtroppo non è l’unico pericolo che le balene devono fronteggiare. I cambiamenti
+		climatici, l’inquinamento chimico e acustico, l’aumento del traffico marittimo, lo sfruttamento eccessivo delle
+		risorse ittiche sono tutti impatti provocati dall’uomo che mettono in serio pericolo la sopravvivenza delle
+		ultime popolazioni di balene rimaste. La pesca industriale sottrae alle balene preziose risorse alimentari
+		fondamentali come il krill e le espone al rischio di essere accidentalmente catturate dai pescherecci.
+		<select (change)="fontSize()" [formControl]="selectField"> <!-- Reactive Form -->
+			<option value="1">Big size</option>
+			<option value="2">Small size</option>
+			<option value="3">Normal</option>
+		</select>
+	</p>
+</div>
+
+<div class="button">
+	<button id="button" (click)="showAbout()">hide/show</button>
+</div>
+
+<app-sidebar></app-sidebar>
+
+
+<div class="mainpage">
+	<h1> Titolo dell'articolo </h1>
+	<p>
+		Il termine balena definisce, in senso lato, qualsiasi cetaceo di taglia gigantesca, come il capodoglio e i
+		misticeti (balenottere, megattere e balenidi). Il termine è usato in questo senso in espressioni come "caccia
+		alla balena", "canto delle balene", "protezione delle balene". Esso deriva dal latino bālaena, bāllaena o bālēna
+		(dal greco antico: φάλαινα, phálaina o φάλη, phálē dalla stessa radice indoeuropea del tedesco Wal, dell'inglese
+		whale e dello svedese val[1]).
+
+		Su alcuni dizionari della lingua italiana il significato del termine è fatto ricondurre specificatamente alla
+		famiglia Balaenidae[2].
+
+		Secondo Herman Melville, scrittore di Moby Dick, il termine balena contiene al suo interno tutte le specie
+		dell'ordine dei cetacei ed è proprio secondo questa definizione che il capodoglio Moby Dick è La Balena Bianca.
+	</p>
+	
+</div>
+
+<app-form></app-form>

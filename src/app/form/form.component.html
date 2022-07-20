@@ -1,0 +1,42 @@
+<!-- <div class="formContainer">  
+    <form  [formGroup]="form"> 
+        <h1>Form</h1>
+        <div class="name">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" name="name" class="form-control" placeholder="Nome" [formControl]="name">
+
+        </div>
+        <div class="priority">
+            <label for="priority" class="form-label">Priority</label>
+            <select class="form-select" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+        </div>
+        <div class="data">
+            <label for="validationDef  aultUsername" class="form-label">Data</label>
+            <input type="date" name="start" class="form-control" placeholder="Data Inizio" [formControl]="date">
+
+        </div>
+        <div class="description">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" placeholder="Descrizione"></textarea>
+        </div>
+        <div class="button">
+            <button type="submit" class="w-100 btn btn-primary btn-lg">Crea</button>
+        </div>
+    </form>
+
+</div> -->
+
+<div class="formcontrol">
+    <form (ngSubmit)="send()" [formGroup]="form">
+        <input class="form-control" type="text" (input)="controlName()" placeholder="username" formControlName="name">
+        <input class="form-control" type="email" placeholder="E-mail" formControlName="email">
+        <input class="form-control" type="date" placeholder="Data" formControlName="date">
+        <input class="button" type="submit" value="Invia">
+    </form>
+
+</div>
