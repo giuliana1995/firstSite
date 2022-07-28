@@ -6,47 +6,52 @@ import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angula
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
+
 export class FormComponent implements OnInit {
   
-  form: FormGroup;
+  email = "";
+  password = null;
+
+  //form: FormGroup;
   
-  constructor(public fb: FormBuilder) {
+  constructor() {
     
-    this.form = fb.group({
-      "name": ['', Validators.required],
-      "email": ['', Validators.required],
-      "date": [''],
+    // this.form = fb.group({
+      // "name": ['', Validators.required],
+      // "email": ['', Validators.required],
+      // "date": [''],
       //"description": [Validators.required],
-    });
+    //});
   }
   
   ngOnInit(): void {
   }
+
+  save(value: any) {
+    console.log(value);
+  }
   
-  controlName() {
-    let user = this.form.controls['name'].value;
-    if(user.length < 2) {
-      this.form.controls['name'].setErrors({ incorect: true}) 
-    } else {
-      this.form.controls['name'].setErrors(null)
-    }
-  }
+  // controlName() {
+  //   let user = this.form.controls['name'].value;
+  //   if(user.length < 2) {
+  //     this.form.controls['name'].setErrors({ incorect: true}) 
+  //   } else {
+  //     this.form.controls['name'].setErrors(null)
+  //   }
+  // }
 
-  send(): void {
-    if (!this.form.valid) {
-      alert("campo obbligatorio");
-      return;
-    } else {
-      console.log(
-        this.form.controls['name'].value,
-        this.form.controls['email'].value,
-        this.form.controls['date'].value
-      );
-    }
-
-  }
-
-
+  // send(): void {
+  //   if (!this.form.valid) {
+  //     console.log("campo obbligatorio");
+  //     return;
+  //   } else {
+  //     console.log(
+  //       this.form.controls['name'].value,
+  //       this.form.controls['email'].value,
+  //       this.form.controls['date'].value
+  //     );
+  //   }
+  //}
 
 
 }

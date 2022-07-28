@@ -1,64 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
+<app-navbar></app-navbar>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport">
-    <title>Angular</title>
-</head>
+<br>
 
-<body>
-    <nav id="navbar">
-        <!-- <div class="logo">
-            <img src="../assets/logo/logo.jpg" alt="logo">
-        </div> -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)">Pagina 1</a>
-                <div class="dropdown-content">
-                    <a href="#"> Voce 1</a>
-                  
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="javascript:void(0)">Pagina 2</a>
-                <div class="dropdown-content">
-                    <a href="#"> Voce 1</a>
-                    <a href="#"> Voce 2</a>
-                   
-                </div>
-            <li class="dropdown">
-                <a href="javascript:void(0)">Pagina 3</a>
-                <div class="dropdown-content">
-                    <a href="#"> Voce 1</a>
-                    <a href="#"> Voce 2</a>
-                    <a href="#"> Voce 3</a>
-                </div>
-        </ul>
-    </nav>
+<router-outlet></router-outlet>
 
-    <div id="content">
-        <app-home></app-home>
-    </div>
-
-    <footer>
-        Footer della pagina, Footer della pagina, Footer della pagina Footer della pagina Footer della pagina
-        Footer della pagina Footer della pagina Footer della pagina Footer della pagina Footer della pagina Footer della
-        pagina
-        Footer della pagina Footer della pagina
-        <h3> Mappa del sito </h3>
-        <ul>
-            <li>Home</li>
-            <li>Start 1</li>
-            <li>Start 2</li>
-            <li>Start 3</li>
-            <li>Start 4</li>
-        </ul>
-    </footer>
-    <div id="copyright">&copy; copyright 2022 </div>
-</body>
-
-</html>
+<app-footer></app-footer>

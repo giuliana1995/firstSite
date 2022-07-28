@@ -1,41 +1,37 @@
-// .container {
-//     display: flex;
-//     justify-content: center;
+@import "../../theme/theme_common";
 
-//     h1 {
-//         font-size: 30px;
-//     }
+.form {
+    h1 {
+        font-size: 19px;
+        color: $text-color;
+    }
 
-//     button {
-//         background-color: #4152f1;
-//         color: white;
-//         border-radius: 7px;
-//         border: 1px solid black;
-//         font-weight: bold;
-//         padding: 10px 20px;
-//         margin: 20px;
-//         cursor: pointer;
-//     }
-// }
-
-@import "../../theme/theme_colors";
-@import "../../theme/theme_mixins";
-
-.formcontrol {
-    display: flex;
-
+    display: inline-block;
+    width: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    
+    @media (max-width: $breakpoint2) {
+        width: auto;
+       
+    }
+    .form-control.ng-invalid.ng-touched, .ng-invalid.ng-touched.form-select {
+        border: 2px solid red;
+    }
     form {
-        padding: 10px;
-
-        .button {
-            @include border-radius(5px);
-            background-color: $background-color;
-            color: $text-color;
-            border: 1px solid black;
-            font-weight: bold;
-            padding: 10px 20px;
+        @include border-radius(5px);
+        background-color: $background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-style: groove;
+        .form-control {
             margin: 20px;
-            cursor: pointer;
+           padding: 10px;
         }
     }
-}
+}      
+
