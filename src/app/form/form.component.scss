@@ -1,21 +1,20 @@
 @import "../../theme/theme_common";
+ 
 
 .form {
+ 
     h1 {
         font-size: 19px;
         color: $text-color;
     }
 
     display: inline-block;
-    width: 300px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 60px;
+    width: auto;
+    padding-bottom: 114px;
+    margin-bottom: 100px;
+    margin-top: 22%;
+
     
-    @media (max-width: $breakpoint2) {
-        width: auto;
-       
-    }
     .form-control.ng-invalid.ng-touched, .ng-invalid.ng-touched.form-select {
         border: 2px solid red;
     }
@@ -28,9 +27,21 @@
         flex-wrap: wrap;
         flex-direction: row;
         border-style: groove;
+        
         .form-control {
             margin: 20px;
-           padding: 10px;
+            padding: 10px;
+        }
+        @media (max-width: $breakpoint2) {
+            height: 100%;
+            width: auto;
+            padding: 9px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
     }
 }      

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
+  @Output() public sidenavToggle = new EventEmitter();
+
+  
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+  public onSidenav = () => {
+    this.sidenavToggle.emit();
+  };
 
+  public toggle = (close: boolean) => {
+    
+  }
 }
