@@ -8,29 +8,50 @@ import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angula
 })
 
 export class FormComponent implements OnInit {
-  
-  email = "";
-  password = null;
 
-  //form: FormGroup;
+  name = new FormControl("", [Validators.required]);
+  surname = new FormControl("", [Validators.required]);
+
+  access: boolean = false;
+  load: boolean = false;
+  
+  form: FormGroup;
   
   constructor() {
     
-    // this.form = fb.group({
-      // "name": ['', Validators.required],
-      // "email": ['', Validators.required],
-      // "date": [''],
-      //"description": [Validators.required],
-    //});
+    this.form = new FormGroup({
+      name: this.name, 
+      surname: this.surname
+    });
   }
-  
+
   ngOnInit(): void {
+  }
+
+
+  loader() {
+    this.load = !this.load;
+  }
+
+  accessOccurred() {
+    this.access = !this.access;
+    this.load = false;
   }
 
   save(value: any) {
     console.log(value);
+    setTimeout(() => {
+    }, 1000);
+    this.loader();
+
+    setTimeout(() => {
+      this.accessOccurred();
+      this.name.reset();
+      this.surname.reset();
+    }, 3000);
   }
-  
+
+
   // controlName() {
   //   let user = this.form.controls['name'].value;
   //   if(user.length < 2) {

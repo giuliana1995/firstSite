@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   username: string = "Green peace";
+
+  textBtn: string = "show";
 
   show: boolean = false;
 
@@ -26,6 +29,12 @@ export class HomeComponent implements OnInit {
 
   showAbout(): void {
     this.show = !this.show;
+    if(!this.show) {
+      this.textBtn = "show";
+    } else {
+      this.textBtn = "hide";
+    }
+
   }
 
   fontSize(){

@@ -18,7 +18,7 @@ body {
 
 
 
-.button {
+.button  {
     @include border-radius(5px);
     background-color: $button-color;
     color: $text-color-btn;
@@ -28,6 +28,12 @@ body {
     margin: 20px;
     cursor: pointer;
     $breakpoint: 768px;
+    
+    &[disabled] {
+        background-color: grey;
+        color: white;
+        opacity: 0.5;
+    }
 }
 
 #custom-navbar {
@@ -52,4 +58,15 @@ mat-sidenav-container {
     .mat-drawer-backdrop.mat-drawer-shown {
         visibility: collapse;
     }
+}
+
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: rgba(255, 255, 255, 0.529);
+}
+
+mat-progress-spinner , mat-progress-spinner > svg  {
+    width: 50px!important;
+    height: 50px!important;
 }
