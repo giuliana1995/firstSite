@@ -2,18 +2,25 @@
 
 
 .form {
+    
+    display: inline-block;
+    width: auto;
+    padding-bottom: 55px;
+    margin-bottom: 80px;
+    margin-top: 80px;
 
     h1 {
         font-size: 19px;
+        margin-top: -8px;
         color: $text-color;
+        font-family: monospace;
     }
 
-    display: inline-block;
-    width: auto;
-    padding-bottom: 114px;
-    margin-bottom: 100px;
-    margin-top: 22%;
-
+    hr {
+        width: 325px;
+        margin-bottom: 24px;
+        margin-top: 14px;
+    }
 
     .form-control.ng-invalid.ng-touched,
     .ng-invalid.ng-touched.form-select {

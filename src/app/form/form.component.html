@@ -1,5 +1,7 @@
 <div class="form">
+    <hr size=1, color=000000>
     <h1> Accedi con le tue credenziali</h1>
+    <hr size=1, color=000000>
     <!-- Assegnamo al form una local varible #f che contiene una reference al nostro form -->
     <form #f="ngForm" [formGroup]="form" (ngSubmit)="save(f.value)">
         <input type="nome" placeholder="nome" class="form-control" name="nome" [formControl]="name">
