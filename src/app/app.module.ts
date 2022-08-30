@@ -19,6 +19,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HomeCardsComponent } from './home-cards/home-cards.component';
+import { NavbarCardsComponent } from './navbar-cards/navbar-cards.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FooterComponent,
     NavbarComponent,
     ContainerComponent,
+    HomeCardsComponent,
+    NavbarCardsComponent,
     
 
   ],

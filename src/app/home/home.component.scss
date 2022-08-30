@@ -5,21 +5,21 @@
     display: inline-block;
     text-align: center;
     color: $text-color;
-    background-color: $background-color;
+    background-color: white;
     border-style: groove;
     @include border-radius(5px);
     padding: 20px;
     margin: 10px;
-    margin-top: 13%;
+    margin-top: 7%;
     @media (max-width: 600px) {
-        margin-top: 24%;;
+        margin-top: 35px;
     }
     h2 {
         color: black;
         font-family:Impact, 'Arial Narrow Bold', sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         padding: 7px;
-        margin: 7px;
+        margin-top: -10px;
     }
 
     p {
@@ -27,15 +27,16 @@
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
+        color: black;
         .hideShow {
             cursor: pointer;
             font-family:monospace;
-            color: rgb(215, 215, 43);
+            color: rgba(252, 56, 56, 0.882);
             padding: 6px;
         }
         .hideShow:hover {
             text-decoration: underline;
-            color: rgb(215, 215, 43);
+            color: rgba(252, 56, 56, 0.882);
 
         } 
     }
@@ -87,21 +88,22 @@
         align-items: center;
         flex-direction: column;
         @include border-radius(5px);
-        background-color: $background-color;
+        background-color: white;
         color: $text-color;
         width: 80%;
         margin: 10px;
         text-align: left;
         border-style: groove;
         h1 {
-            font-size: 30px;
-            color:black;
+            font-size: 25px;
+            color: black;
             font-family:Impact, 'Arial Narrow Bold', sans-serif;
         }
 
         p {
-            padding: 20px;
+            padding: 15px;
             font-family: Arial, Helvetica, sans-serif;
+            color: black;
             
         }
 
@@ -118,6 +120,7 @@
             p {
                 width: 90%;
                 font-size: 14px;
+                margin-top: -13px;
             }
         }
 
@@ -132,9 +135,13 @@
         align-items: center;
         flex-direction: column;
         color: $text-color;
-        background-color: $background-color;
+        background-color: white;
         margin-top: 0;
         margin: 10px;
+
+        ul {
+            color: gray;
+        }
 
         @media (max-width: $breakpoint1) {
             width: 100%;
@@ -150,11 +157,11 @@
                 cursor: pointer;
                 margin: 10px;
                 padding: 0;
-                ;
+                
 
                 li {
                     padding: 8px 13px;
-                    border-left: solid;
+                    color: gray;
                 }
             }
 

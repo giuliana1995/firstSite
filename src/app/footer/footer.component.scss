@@ -12,6 +12,7 @@
         #copyright {
             margin-left: -10px;
             margin-top: 11px;
+            margin-bottom: 10px;
             width: 100%;
             font-family: fantasy;
         }
@@ -26,10 +27,14 @@
                 display: flex;
                 justify-content: space-evenly;
                 a {
-                    padding: 17px;
+                    font-size: 15px;
+                    padding: 7px;
                     cursor: pointer;
                     text-decoration: none;
                     color: black;
+                    @media (max-width: 500px) {
+                        font-size: 11px;
+                    }
                 }
                 a:hover {
                     color: rgba(236, 24, 24, 0.851);
@@ -56,6 +61,10 @@
             font-family: fantasy;
             margin-left: -9px;
             margin-top: 14px;
+            @media (max-width: 500px) {
+                font-size: 13px;
+                
+            }
         }
 
         .icons {

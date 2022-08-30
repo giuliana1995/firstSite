@@ -1,0 +1,18 @@
+
+<div class="homeCards">
+    <div class="allCards">
+        <div class="cardsContainer" *ngFor="let element of data">
+            <img class="imgCards" src="{{element.img}}" alt="immagine card">
+            <div class="textFlex">
+                <h1 class="text">{{element.text}}</h1>
+                <span class="textDate">{{element.textDate}}</span>
+                <!-- <h2 class="textTitle">{{element.textTitle}}</h2> -->
+                <!-- <h3 class="textMain">{{element.textMain}}</h3> -->
+                <div class="btnContainer">
+                <button class="button"> more info</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

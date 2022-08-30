@@ -2,9 +2,11 @@
 
 mat-nav-list {
 
+    background-color: black;
+
     .closeBtn {
         color: #ffffff;
-        background-color: #202124;
+        background-color: black;
         float: right;
         margin-right: 0px;
         margin-top: -8px;
@@ -52,7 +54,10 @@ mat-nav-list {
 
     .wrap {
 
+        background-color: black;
+
         .container {
+            background-color: black;
             width: 100%;
             position: sticky;
             padding-top: 40px;
@@ -70,10 +75,11 @@ mat-nav-list {
                 bottom: -41px;
 
                 .countryList {
+                    background-color: black;
                     height: 244px;
                     width: 98%;
                     color: white;
-                    background-color: $background-color;
+                    
                     border-color: rgb(255, 255, 255);
                     border-width: 1px;
                     border-style: solid;

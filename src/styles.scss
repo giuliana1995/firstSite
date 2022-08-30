@@ -30,7 +30,7 @@ body {
     $breakpoint: 768px;
     
     &[disabled] {
-        background-color: grey;
+        background-color: rgba(173, 169, 169, 0.855);
         color: white;
         opacity: 0.5;
     }
@@ -50,6 +50,7 @@ body {
             margin-top: 10px;
             position: relative;
             height: inherit;
+            background-color: black;
         }
     }
 }
@@ -58,12 +59,13 @@ mat-sidenav-container {
     .mat-drawer-backdrop.mat-drawer-shown {
         visibility: collapse;
     }
+
 }
 
 
 .mat-progress-spinner circle,
 .mat-spinner circle {
-    stroke: rgba(255, 255, 255, 0.529);
+    stroke: rgba(255, 255, 255, 0.611);
 }
 
 mat-progress-spinner , mat-progress-spinner > svg  {
