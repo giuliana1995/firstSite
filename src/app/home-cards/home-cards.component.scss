@@ -29,8 +29,9 @@ p {
         .cardsContainer {
             width: 30%;
             height: 290px;
-            box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.62);
-            background: white;
+            //box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.62);
+            box-shadow: rgba(0, 0, 0, 60%) 0px 19px 38px, rgba(0, 0, 0, 76%) 0px 15px 12px;
+            background: #fafafa91;
             margin: 35px;
             margin-bottom: 56px;
             border-radius: 5px;

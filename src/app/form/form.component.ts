@@ -11,6 +11,10 @@ export class FormComponent implements OnInit {
 
   name = new FormControl("", [Validators.required]);
   surname = new FormControl("", [Validators.required]);
+  data = new FormControl("",[Validators.required]);
+  email = new FormControl("", [Validators.required]);
+  password = new FormControl("", [Validators.required]);
+
 
   access: boolean = false;
   load: boolean = false;
@@ -21,7 +25,10 @@ export class FormComponent implements OnInit {
     
     this.form = new FormGroup({
       name: this.name, 
-      surname: this.surname
+      surname: this.surname,
+      data: this.data,
+      email: this.email,
+      password: this.password
     });
   }
 

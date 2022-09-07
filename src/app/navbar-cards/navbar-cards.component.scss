@@ -11,6 +11,7 @@ nav {
     border-bottom: 1px solid rgba(249, 240, 240, 0.1);
     height: 50px;
     margin-top: 13px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
     button {
         font-size: 16px;
@@ -38,7 +39,6 @@ nav {
 
     button:hover {
         background-color: rgba(249, 240, 240, 0.1);
-        ;
         transition: all 200ms ease-in-out;
         border-radius: 3px;
     }

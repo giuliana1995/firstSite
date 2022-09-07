@@ -1,24 +1,59 @@
-<div class="form">
-    <hr size=1, color=000000>
-    <h1> Accedi con le tue credenziali</h1>
-    <hr size=1, color=000000>
-    <!-- Assegnamo al form una local varible #f che contiene una reference al nostro form -->
-    <form #f="ngForm" [formGroup]="form" (ngSubmit)="save(f.value)">
-        <input type="nome" placeholder="nome" class="form-control" name="nome" [formControl]="name">
-        <!-- per far si che i validator (required) siano applicati dobbiamo assegnare un attributo ngModel al nostro campo di input. Ng model è una ditrettiva che mette in binding ovvero sintonizza un qualsiasi campo di input checkbox select ecc.. con una proprietà-->
+<div class="form-cnt">
+
+    <div class="form">
+        <hr size=1, color=111111>
+        <h1> Iscriviti al nostro progetto</h1>
+        <hr size=1, color=000000>
+        <!-- Assegnamo al form una local varible #f che contiene una reference al nostro form -->
+        <form #f="ngForm" [formGroup]="form" (ngSubmit)="save(f.value)">
+    
+    
+                <div class="nome">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="nome" placeholder="nome" class="form-control" name="nome" [formControl]="name">
+                </div>
+                <!-- per far si che i validator (required) siano applicati dobbiamo assegnare un attributo ngModel al nostro campo di input. Ng model è una ditrettiva che mette in binding ovvero sintonizza un qualsiasi campo di input checkbox select ecc.. con una proprietà-->
         
-        <input type="cognome" placeholder="cognome" class="form-control" name="cognome" minlength="5" [formControl]="surname">
-        <button type="submit" class="button" [disabled]="!name.valid || !surname.valid || load ">Invia</button>
+                <div>
+                    <label for="surname" class="form-label">Cognome:</label>
+                    <input type="cognome" placeholder="cognome" class="form-control" name="cognome" minlength="5" [formControl]="surname">
+                </div>
         
-        <div id="load">
-            <mat-progress-spinner *ngIf="load && !access" mode="indeterminate"></mat-progress-spinner> 
-        </div>
+                <div>
+                    <label for="data" class="form-label">Data di nascita:</label>
+                    <input type="date" class="form-control" placeholder="Data Inizio" [formControl]="data">
+                </div>
         
-        <div id="access" *ngIf="access">
-            <mat-icon>check_circle_outline</mat-icon><p>Accesso eseguito con successo</p>
-        </div>
-    </form>
-</div>
+                <div>
+                    <label for="email" class="form-label">email:</label>
+                    <input type="email" name="email" placeholder="email" class="form-control" [formControl]="email">
+                </div>
+        
+                <div>
+                    <label for="password" class="form-label">password:</label>
+                    <input type="password" name="password" placeholder="password" class="form-control" [formControl]="password">
+                </div>
+    
+                <div class="separator">
+                </div>
+    
+                <div>
+    
+                    <button type="submit" class="button" [disabled]="!name.valid || !surname.valid || load ">Invia</button>
+                </div>
+            
+    
+            <div id="load">
+                <mat-progress-spinner *ngIf="load && !access" mode="indeterminate"></mat-progress-spinner>
+            </div>
+    
+            <div id="access" *ngIf="access">
+                <mat-icon>check_circle_outline</mat-icon>
+                <p>Accesso eseguito con successo</p>
+            </div>
+        </form>
+    </div>
+
+</div>    
 
 <!--cambiare email e password in nome e cognome, simulare una chiamata a be con set timeout e nel frattempo che la chiamata va a buon fine inserire un loading, una volta terminata mosrtare un messaggio di caricamento avvenuto con successo -->
-
