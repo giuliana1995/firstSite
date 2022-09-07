@@ -1,0 +1,68 @@
+@import '../../theme/theme_common';
+
+mat-toolbar {
+    position: fixed;
+    justify-content: space-between;
+    background-color: $background-color-nav;
+    border-radius: 4px;
+    z-index: 1;
+
+    @media (max-width: 600px) {
+        a {
+            display: none;
+        }
+    }
+
+    button {
+        color: white;    
+    }
+
+    mat-icon {
+        margin-left: -30px;
+        font-size: 32px;
+    }
+
+    mat-icon:hover,
+    mat-icon:active {
+        color: $hover-color;
+        font-size: 42px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 26px;
+        margin-left: -18px;
+        font-size: 17px;
+    }
+
+    a:hover,
+    a:active {
+        color: rgb(240, 230, 42);
+    }
+
+    .navigation-item {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .logo {
+
+        color: $button-color;
+        font-size: 37px;
+        line-height: 80px;
+        margin-right: -6px;
+        font-weight: bold;
+
+    }
+
+}

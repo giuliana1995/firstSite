@@ -1,25 +1,73 @@
-<header>
-    
-    <!--<img src="../assets/logo/logo2.jpg" alt="Logo" width="80px" class="logo">-->
+<mat-nav-list id="custom-navbar" class="sidebar">
+
+    <button (click)="closeButton()" class="closeBtn"> x </button>
+
+    <div id="custom-link">
+        <a mat-list-item href="#" routerLink="/home" (click)="onSidenavClose()">
+            <mat-icon>home</mat-icon><span class="nav-caption"> Home </span>
+        </a>
+        <a mat-list-item href="#" routerLink="/form" (click)="onSidenavClose()">
+            <mat-icon>portrait</mat-icon><span class="nav-caption"> Form </span>
+        </a>
+        <a mat-list-item href="#" routerLink="" (click)="onSidenavClose()">
+            <mat-icon>folder_open</mat-icon><span class="nav-caption"> Account </span>
+        </a>
+        <a mat-list-item href="#" routerLink="" (click)="onSidenavClose()">
+            <mat-icon>folder</mat-icon><span class="nav-caption"> progetti </span>
+        </a>
+    </div>
+
+    <div class="wrap">
+        <div class="container">
+            <button (click)="open()" class="btn">
+                <div *ngIf="isOpen" class="countryList">
+                    <div *ngFor="let city of languages" class="dynamic">
+                        <a (click)="select(city)" class="a">{{city.name}}</a>
+                    </div>
+                </div>
+                <p class="x">Seleziona Lingua</p>
+                <p *ngIf="selectedCountry" class="selectedCountry1">{{selectedCountry.name}}</p>
+                <div>
+                    <p *ngIf="!selectedCountry" class="selectedCountry">Italia </p>
+                    <mat-icon class="ico" *ngIf="!isOpen">keyboard_arrow_down</mat-icon>
+                    <mat-icon class="ico" *ngIf="isOpen">keyboard_arrow_up</mat-icon>
+                    <!-- <img *ngIf="!isOpen" src="../../assets/arrow/arrow2.jpg" alt="" class="ico">
+                    <img *ngIf="isOpen" src="../../assets/arrow/arrow1.jpg" alt="" class="ico"> -->
+                </div>
+            </button>
+        </div>
+
+    </div>
+
+</mat-nav-list>
+
+
+
+<!-- <header>
+
+    <img src="../assets/logo/logo2.jpg" alt="Logo" width="80px" class="logo">
     <nav>
-        <input type="checkbox"id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa fa-bars"></i>
-        </label>
+        <input type="checkbox" id="check">
         <label class="logo">Log4u</label>
-        <ul>
-            <li><a class="active" href="#" routerLink="/home">Home</a></li>
-            <li><a href="#" routerLink="/form">Form</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
+        <div class="menu">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="active" href="#" routerLink="/home">Home</a></li>
+                <li><a href="#" routerLink="/form">Form</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+
+        </div>
 
     </nav>
-    <!-- <button class="button">Log-in</button> -->
-</header>
-    
-    <!-- <ul class="menu">
+     <button class="button">Log-in</button> 
+</header> -->
+
+<!-- <ul class="menu">
         <label for=""></label>
         <li class="dropdown">
             <a href="#" routerLink="/home">Home</a>

@@ -1,0 +1,25 @@
+
+<nav>
+  
+    <ol #element>
+      <li>
+        <button class="" type="submit" (click)="showObj(card4Data,false)">Card 1</button>
+      </li>
+      <li>
+        <button (click)="showObj(card1Data,false) ">Card 2</button>
+      </li>
+      <li>
+        <button type="submit" (click)="showObj(card3Data,true)">Card 3</button>
+      </li>
+      <li>
+        <button type="submit" (click)="showObj(card2Data,false)">Card 4</button>
+      </li>
+      <li>
+        <button type="submit" (click)="showObj(card3Data,false)">Card 5</button>
+      </li>
+    </ol>
+  
+</nav>
+
+
+<app-home-cards [class.delete]="onOff" [data]="data"></app-home-cards>
