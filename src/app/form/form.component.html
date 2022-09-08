@@ -14,22 +14,22 @@
                 </div>
                 <!-- per far si che i validator (required) siano applicati dobbiamo assegnare un attributo ngModel al nostro campo di input. Ng model è una ditrettiva che mette in binding ovvero sintonizza un qualsiasi campo di input checkbox select ecc.. con una proprietà-->
         
-                <div>
+                <div class="cognome">
                     <label for="surname" class="form-label">Cognome:</label>
-                    <input type="cognome" placeholder="cognome" class="form-control" name="cognome" minlength="5" [formControl]="surname">
+                    <input type="cognome" placeholder="cognome" class="form-control" name="cognome" [formControl]="surname">
                 </div>
         
-                <div>
+                <div class="data">
                     <label for="data" class="form-label">Data di nascita:</label>
-                    <input type="date" class="form-control" placeholder="Data Inizio" [formControl]="data">
+                    <input type="date" class="form-control" placeholder="Data di nascita" [formControl]="data">
                 </div>
         
-                <div>
+                <div class="email">
                     <label for="email" class="form-label">email:</label>
                     <input type="email" name="email" placeholder="email" class="form-control" [formControl]="email">
                 </div>
         
-                <div>
+                <div class="password">
                     <label for="password" class="form-label">password:</label>
                     <input type="password" name="password" placeholder="password" class="form-control" [formControl]="password">
                 </div>
