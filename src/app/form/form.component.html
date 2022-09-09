@@ -7,8 +7,7 @@
         <!-- Assegnamo al form una local varible #f che contiene una reference al nostro form -->
         <form #f="ngForm" [formGroup]="form" (ngSubmit)="save(f.value)">
     
-    
-                <div class="nome">
+                <div class="nome" >
                     <label for="name" class="form-label">Nome:</label>
                     <input type="nome" placeholder="nome" class="form-control" name="nome" [formControl]="name">
                 </div>
@@ -31,7 +30,7 @@
         
                 <div class="password">
                     <label for="password" class="form-label">password:</label>
-                    <input type="password" name="password" placeholder="password" class="form-control" [formControl]="password">
+                    <input type="password" name="password" placeholder="password" class="form-control" minlength="6" [formControl]="password">
                 </div>
     
                 <div class="separator">
@@ -39,7 +38,7 @@
     
                 <div>
     
-                    <button type="submit" class="button" [disabled]="!name.valid || !surname.valid || load ">Invia</button>
+                    <button type="submit" class="button" [disabled]="!name.valid || !surname.valid || !data.valid || !email.valid || !password.valid || load ">Invia</button>
                 </div>
             
     

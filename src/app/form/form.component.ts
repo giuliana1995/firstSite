@@ -9,11 +9,11 @@ import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angula
 
 export class FormComponent implements OnInit {
 
-  name = new FormControl("", [Validators.required]);
-  surname = new FormControl("", [Validators.required]);
+  name = new FormControl("", [Validators.required, Validators.minLength(1)]);
+  surname = new FormControl("", [Validators.required, Validators.minLength(1)]);
   data = new FormControl("",[Validators.required]);
-  email = new FormControl("", [Validators.required]);
-  password = new FormControl("", [Validators.required]);
+  email = new FormControl("", [Validators.required, Validators.email]);
+  password = new FormControl("", [Validators.required, Validators.minLength(8)]);
 
 
   access: boolean = false;
@@ -55,8 +55,12 @@ export class FormComponent implements OnInit {
       this.accessOccurred();
       this.name.reset();
       this.surname.reset();
+      this.data.reset();
+      this.email.reset();
+      this.password.reset();
     }, 3000);
   }
+
 
 
   // controlName() {

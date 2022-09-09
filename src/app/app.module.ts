@@ -21,9 +21,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { NavbarCardsComponent } from './navbar-cards/navbar-cards.component';
+import { FormListComponent } from './form-list/form-list.component';
+import { AccountComponent } from './account/account.component';
+import { StoreModule } from '@ngrx/store';
+
 
 @NgModule({
+
   declarations: [
+
     AppComponent,
     HomeComponent,
     FormComponent,
@@ -32,9 +38,10 @@ import { NavbarCardsComponent } from './navbar-cards/navbar-cards.component';
     ContainerComponent,
     HomeCardsComponent,
     NavbarCardsComponent,
-    
-
+    FormListComponent,
+    AccountComponent,
   ],
+   
   imports: [
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
@@ -50,7 +57,8 @@ import { NavbarCardsComponent } from './navbar-cards/navbar-cards.component';
     FlexLayoutModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    StoreModule.forRoot({  })
   ],
   providers: [],
   bootstrap: [AppComponent]

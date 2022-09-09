@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent},
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'account', component: AccountComponent
   }
 
 ];
