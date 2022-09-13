@@ -1,0 +1,14 @@
+.AccountList {
+
+    margin-top: 100px;
+
+    tbody {
+        
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 44px;
+    justify-content: space-between;
+    flex-direction: column;
+
+    }
+}

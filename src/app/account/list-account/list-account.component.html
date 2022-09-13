@@ -1,0 +1,33 @@
+<div class="AccountList">
+
+  <h3>Account Aggiunti ({{ count | async }}) </h3>
+
+  <div>
+    <a href="#" class="button" [routerLink]="['/account/add']"> aggiungi account</a>
+  </div>
+
+  <table class="table table-striped" *ngIf="accounts | async as postsData">
+
+
+    <tbody>
+      <tr *ngFor="let account of postsData">
+        <td>{{ account.id }}</td>
+        <td>{{ account.title }}</td>
+        <td>{{ account.description }}</td>
+        <td>
+
+          <button>
+            <a href="" class="btn btn-primary" [routerLink]="['edit', account.id]">Modifica</a>
+          </button>
+          <button class="btn btn-danger" (click)="onDeletePost(account.id)">Cancella</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="col-md-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

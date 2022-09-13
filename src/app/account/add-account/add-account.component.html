@@ -1,0 +1,25 @@
+<div class="account">
+
+    <h3> Account</h3>
+    <hr>
+    <form [formGroup]="account" (ngSubmit)="onAddPost()">
+
+        <div class="titolo"> titolo
+            <input type="text" class="form-control" formControlName="title" [formControl]="title">
+            
+        </div>
+
+
+        <div class="descrizione"> descrizione
+            <input type="text" class="form-control" formControlName="Descrizione" [formControl]="description">
+        </div>
+
+        <div class="btn">
+            <button type="submit" class="button" [disabled]="!title.valid || !description.valid">
+                Aggiungi account
+            </button>
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,7 @@
+<div>Dettagli</div>
+<div *ngIf="account |async as postData">
+    <div>id: {{ postData.id }} </div>
+    <div>Titolo: {{ postData.title }} </div>
+    <div>Descrizione: {{ postData.description }} </div>
+</div>
+<div><a href="['/posts']">Torna agli account</a></div>
