@@ -23,12 +23,12 @@ export class EditAccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-    this.store.select(getPostById).subscribe((post) => {
-      if (post) {
-        this.account = post;
+    this.store.select(getPostById).subscribe((account) => {
+      if (account) {
+        this.account = account;
         this.accountForm.patchValue({
-          title: post.title,
-          description: post.description,
+          title: account.title,
+          description: account.description,
         });
       }
     });
@@ -63,7 +63,7 @@ export class EditAccountComponent implements OnInit {
     };
 
     this.store.dispatch(updatePost({ account }));
-    this.router.navigate(['posts']);
+    this.router.navigate(['account']);
   }
 
   ngOnDestroy() {

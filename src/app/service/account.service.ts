@@ -45,7 +45,7 @@ export class AccountService {
 
   deletePost(id: string) {
     return this.http.delete(
-      `https://vue-completecourse.firebaseio.com/posts/${id}.json`
+      `https://vue-completecourse.firebaseio.com/posts/${id}.json`,
     );
   }
 

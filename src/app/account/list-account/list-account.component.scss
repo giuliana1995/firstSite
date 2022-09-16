@@ -1,14 +1,207 @@
-.AccountList {
-
-    margin-top: 100px;
-
-    tbody {
-        
+.account {
+    
+    margin-top: 50px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 44px;
-    justify-content: space-between;
-    flex-direction: column;
+    min-height: 83vh;
+    
+    background: url('../../../assets/account.jpg');
+    background-size: cover;
+    box-shadow: rgb(0 0 0) 29px 115px 83px -9px inset,
+    rgb(0 0 0) 0px 85px 76px -62px inset;
+    
+    .pre-account {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 48%;
+        margin-top: 93px;
+        margin-left: 393px;
+        background-color: rgb(29 26 26 / 90%);
+        color: white;
+        border-radius: 33px;
+        border: solid 2px rgb(0, 0, 0);
+
+        @media (width: 768px) {
+            margin-top: 56px;
+        }
+
+        h2 {
+            font-family: monospace;
+        }
+
+        p {
+            font-family: monospace;
+            margin: 10px;
+        }
+    }
+    
+    
+    @media (max-width: 426px) {
+        justify-content: center;
+    }
+
+
+
+    .accountList {
+        /*    flex: 0 0 auto;
+        width: 157.666667%; */
+       
+    
+        @media (min-width: 768px) {
+            flex: 0 0 auto;
+            width: 48.6666666667%;
+        }
+
+        .addAccount {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           /*  margin-left: 57px;
+            margin-top: 62px; */
+            margin-top: -208px;
+            margin-left: 6px;
+
+            h3 {
+                color: white;
+                margin-top: 30px;
+                margin-left: 18px;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 1.2;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            }
+
+            .btn {
+                box-sizing: border-box;
+                margin-top: 59px;
+                margin-left: 20px;
+
+                a {
+                    border-radius: 19px;
+                    text-decoration: none;
+                    color: white;
+                    background-color: black;
+
+                }
+
+            }
+
+            @media (max-width: 426px) {
+                margin-left: 0px;
+            }
+
+            @media (width: 768px) {
+                /* margin-left: -123px; */
+                margin-left: -6px;
+            }
+        }
+
+
+
+
+        .table {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: row;
+            /* height: 100px; */
+            /* padding: 5px; */
+            flex-wrap: wrap;
+            /* height: 45%; */
+            width: 100%;
+            flex: 0 0 auto;
+            /*  width: 11.666667%; */
+            margin-left: 20px;
+
+            tbody {
+
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 44px;
+                justify-content: flex-start;
+                flex-direction: row;
+                margin-left: -21px;
+                margin-bottom: 60px;
+
+
+                @media (max-width: 428px) {
+                    margin-left: 10px;
+                    justify-content: center;
+
+                }
+
+                @media (max-width: 375px) {
+                    justify-content: center;
+                }
+
+
+
+                tr {
+
+                    border: solid 1px black;
+                    margin-top: 10px;
+                    width: 175px;
+                    margin: 10px;
+                    background-color: rgb(255 255 255 / 88%);
+                    border-radius: 8px;
+
+
+                    h2 {
+                        font-size: 14px;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: fantasy;
+                    }
+
+                    td {
+                        font-size: 11px;
+                        display: flex;
+                        flex-direction: column;
+                        word-wrap: break-word;
+                        font-family: monospace;
+                    }
+
+                    button {
+                        background-color: black;
+                        color: white;
+                        padding: 6px 17px;
+                        margin: 8px;
+
+                        a {
+                            text-decoration: none;
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                }
+
+            }
+        }
 
     }
 }
+
+.router {
+    float: 0 0 auto;
+    margin-top: 20%;
+    margin-left: 100px;
+
+    @media (max-width: 1062px) {
+        margin-top: 20%;
+        margin-left: 0;
+    }
+
+    @media (width: 768px) {
+        margin-top: 25%;
+        margin-left: -38px;
+    }
+
+
+}
+
+/* 
+width: 166.333333%; */

@@ -5,7 +5,7 @@ import { postsAdapter, PostsState } from '../state/account.state';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { RouterState } from '@angular/router';
 
-export const POST_STATE_NAME = 'posts';
+export const POST_STATE_NAME = 'account';
 const getPostsState = createFeatureSelector<PostsState>(POST_STATE_NAME);
 export const postsSelectors = postsAdapter.getSelectors();
 
@@ -18,8 +18,8 @@ export const getPostEntities = createSelector(
 export const getPostById = createSelector(
   getPostEntities,
   getCurrentRoute,
-  (posts, route: RouterStateUrl) => {
-    return posts ? posts[route.params['id']] : null;
+  (account, route: RouterStateUrl) => {
+    return account ? account[route.params['id']] : null;
   }
 );
 

@@ -29,6 +29,7 @@ import {
   ROUTER_NAVIGATION,
 } from '@ngrx/router-store';
 import { of } from 'rxjs';
+import { Action } from 'rxjs/internal/scheduler/Action';
 //import { dummyAction } from 'src/app/auth/state/auth.actions';
 
 @Injectable()
@@ -38,6 +39,7 @@ export class PostsEffects {
     private accountService: AccountService,
     private store: Store<AppState>
   ) {}
+
 
   loadPosts$ = createEffect(() => {
     return this.actions$.pipe(
@@ -49,7 +51,6 @@ export class PostsEffects {
                 })
             )
         })
-      
     );
   });
 
@@ -97,6 +98,18 @@ export class PostsEffects {
       })
     );
   });
+
+  getSinglePost$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(ROUTER_NAVIGATION),
+      filter((r: RouterNavigatedAction) => {
+        return r.payload.routerState.url.startsWith('/posts/details');
+      }),
+    
+    );
+  });
+
+
  
    
    

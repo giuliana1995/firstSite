@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { AddAccountComponent } from './account/add-account/add-account.component';
+import { SingleAccountComponent } from './account/single-account/single-account.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
     loadChildren: () => 
       import('./account/post.module').then((m) => m.PostsModule), 
   },
+  {
+    path: 'account/details/:id',
+    component: SingleAccountComponent,
+  }
 
 
 ];

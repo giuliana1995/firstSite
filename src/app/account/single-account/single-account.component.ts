@@ -11,14 +11,13 @@ import { getPostById } from '../state/account.selector';
   styleUrls: ['./single-account.component.scss']
 })
 export class SingleAccountComponent implements OnInit {
-  
-  account!: Observable<Account>;
 
+  account!: Observable<Account>;
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-   // this.account = this.store.select('id');
+    this.store.select(getPostById);
   }
 
 }

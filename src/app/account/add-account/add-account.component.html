@@ -1,25 +1,31 @@
-<div class="account">
+<div class="account-cnt">
 
-    <h3> Account</h3>
-    <hr>
-    <form [formGroup]="account" (ngSubmit)="onAddPost()">
-
-        <div class="titolo"> titolo
-            <input type="text" class="form-control" formControlName="title" [formControl]="title">
-            
-        </div>
+    <div class="account">
 
 
-        <div class="descrizione"> descrizione
-            <input type="text" class="form-control" formControlName="Descrizione" [formControl]="description">
-        </div>
+        <h3>Progetto</h3>
+        
+        <form [formGroup]="account" (ngSubmit)="onAddPost()">
+    
+            <div class="titolo"> 
+                <label for="titolo" class="form-label">Titolo:</label>
+                <input type="text" class="form-control" formControlName="title" [formControl]="title">
+            </div>
+    
+    
+            <div class="descrizione"> 
+                <label for="titolo" class="form-label">Descrizione:</label>
+                <input type="text" class="form-control" formControlName="Descrizione" [formControl]="description">
+            </div>
+    
+            <div class="btn">
+                <button type="submit" class="button" [disabled]="!title.valid || !description.valid">
+                    Aggiungi account
+                </button>
+            </div>
+    
+        </form>
+    </div>
 
-        <div class="btn">
-            <button type="submit" class="button" [disabled]="!title.valid || !description.valid">
-                Aggiungi account
-            </button>
-        </div>
-
-    </form>
 
 </div>

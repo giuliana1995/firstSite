@@ -22,10 +22,12 @@ export class ListAccountComponent implements OnInit {
     this.accounts = this.store.select(getPosts);
     this.count = this.store.select(getCount);
     this.store.dispatch(loadPosts());
+
   }
 
   onDeletePost(id: string) {
     this.store.dispatch(deletePost({ id }))
   }
+
 
 }

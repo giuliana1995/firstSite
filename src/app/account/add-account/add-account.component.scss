@@ -1,9 +1,67 @@
-.account {
- 
-    display: inline-block;
-    width: auto;
-    padding-bottom: 55px;
-    margin-bottom: 80px;
-    margin-top: 80px;
-   
+.account-cnt {
+
+    /* margin-left: 190px; */
+
+    margin-top: -141px;
+    margin-left: 122px;
+
+    @media (max-width: 769px) {
+        margin-left: 130px;
+    }
+
+    .account {
+
+        display: inline-block;
+        width: auto;
+        padding-bottom: 55px;
+        margin-bottom: 80px;
+        margin-top: -63px;
+        margin-right: 39px;
+
+        @media (max-width: 426px) {
+            margin-right: 0;
+        }
+        @media (max-width: 426px) {
+            margin-top: -40px;
+        }
+
+
+        h3 {
+            font-size: 22px;
+            margin-top: 35px;
+            color: white;
+
+        }
+
+        form {
+            height: 100%;
+            width: auto;
+            padding: 9px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border: solid 2px rgb(0, 0, 0);
+            background-color: rgb(29 26 26 / 90%);
+            border-radius: 22px;
+
+            .form-label {
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .form-control {
+                margin: 15px;
+                padding: 10px;
+                width: 70%;
+            }
+
+        }
+
+    }
 }

@@ -1,33 +1,66 @@
-<div class="AccountList">
 
-  <h3>Account Aggiunti ({{ count | async }}) </h3>
-
-  <div>
-    <a href="#" class="button" [routerLink]="['/account/add']"> aggiungi account</a>
+<div class="account">
+  <div class="pre-account">
+    <h2>Gestisci qui i tuoi progetti</h2>
+    <h2>E' facile e veloce</h2>
+    <hr>
+    <p>Con un solo click puoi salvare cancellare e modificare i tuoi progetti
+        ed è tutto completamente gratuito, cosa aspetti? :)
+    </p>
   </div>
 
-  <table class="table table-striped" *ngIf="accounts | async as postsData">
+  <div class="accountList">
+
+    <div class="addAccount">
+
+      <div class="btn">
+        <a href="#" class="button" [routerLink]="['/account/add']"> Aggiungi Progetto</a>
+      </div>
+      <h3>Progetti Aggiunti -- {{ count | async }} -- </h3>
+
+    </div>
 
 
-    <tbody>
-      <tr *ngFor="let account of postsData">
-        <td>{{ account.id }}</td>
-        <td>{{ account.title }}</td>
-        <td>{{ account.description }}</td>
-        <td>
+    <div class="table" *ngIf="accounts | async as postsData">
 
-          <button>
-            <a href="" class="btn btn-primary" [routerLink]="['edit', account.id]">Modifica</a>
-          </button>
-          <button class="btn btn-danger" (click)="onDeletePost(account.id)">Cancella</button>
+      <tbody>
+        <tr *ngFor="let account of postsData">
+          <h2>id:</h2>
+          <td>{{ account.id }}</td>
+          <h2>Titolo:</h2>
+          <td>{{ account.title }}</td>
+          <h2>Descrizione:</h2>
+          <td>{{ account.description }}</td>
+          <td>
 
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <!-- <button>
+              <a href="" class="btn btn-primary" [routerLink]="['edit', account.id]">Modifica</a>
+            </button> -->
 
+            <button class="button" (click)="onDeletePost(account.id)">Cancella</button>
 
-  <div class="col-md-4">
+            <button class="button">
+              <a href="" [routerLink]="['details', account.title]">Dettagli</a>
+            </button>
+
+          </td>
+        </tr>
+      </tbody>
+    </div>
+  </div>
+<!-- 
+  <div class="pre-account">
+    <h2>Aggiungi qui il tuo progetto.</h2>
+    <h3>E' semplice e veloce</h3>
+    <hr>
+    <p>Inserisci il titolo e la descrizione e tieni traccia di
+      tutti i tuoi progetti con un solo clik.
+    </p>
+  </div> -->
+
+  <div class="router">
     <router-outlet></router-outlet>
   </div>
+
+
 </div>
