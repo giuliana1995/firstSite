@@ -1,20 +1,26 @@
-
 <div class="account">
-  <div class="pre-account">
+
+ <!--  <div class="pre-account">
     <h2>Gestisci qui i tuoi progetti</h2>
     <h2>E' facile e veloce</h2>
     <hr>
     <p>Con un solo click puoi salvare cancellare e modificare i tuoi progetti
-        ed è tutto completamente gratuito, cosa aspetti? :)
+      ed è tutto completamente gratuito, cosa aspetti? :)
     </p>
-  </div>
+  </div> -->
 
   <div class="accountList">
 
+    <div class="router">
+      <router-outlet></router-outlet>
+    </div>
     <div class="addAccount">
 
+
+
+
       <div class="btn">
-        <a href="#" class="button" [routerLink]="['/account/add']"> Aggiungi Progetto</a>
+        <a href="#" class="button" [routerLink]="['/account/add']"> Clicca qui per aggiungere il tuo progetto!</a>
       </div>
       <h3>Progetti Aggiunti -- {{ count | async }} -- </h3>
 
@@ -48,7 +54,7 @@
       </tbody>
     </div>
   </div>
-<!-- 
+  <!-- 
   <div class="pre-account">
     <h2>Aggiungi qui il tuo progetto.</h2>
     <h3>E' semplice e veloce</h3>
@@ -58,9 +64,6 @@
     </p>
   </div> -->
 
-  <div class="router">
-    <router-outlet></router-outlet>
-  </div>
 
 
 </div>

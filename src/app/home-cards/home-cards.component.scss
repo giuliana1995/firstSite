@@ -35,14 +35,33 @@ p {
             margin: 35px;
             margin-bottom: 56px;
             border-radius: 5px;
-            @media (max-width: 790px) {
-                width: 56%;
+            @media (max-width: 2560px) {
+                width: 20%;
+            }
+            @media (max-width: 1440px) {
+                width: 24%;
+                
+            }
+            
+            @media (max-width: 1024px) {
+                width: 35%;
                 height: 250px;
             }
 
-            @media (width: 2560px) {
-                width: 20%;
+            @media (max-width: 790px) {
+                width: 78%;
+                height: 250px;
             }
+
+            @media (width: 768px) {
+                width: 54%;
+            }
+
+            @media (max-width: 320px) {
+                width: 75%;
+                height: 250px;
+            }
+
 
         }
 
@@ -76,13 +95,18 @@ p {
                 margin-top: -33px;
             }
             @media (max-width: 790px) {
-                width: 283px;
+                width: 266px;
                 margin-top: -42px;
             }
             @media (max-width: 426px) {
-                width: 246px;
+                width: 202px;
             }
-            
+            @media (max-width: 375px) {
+                width: 193px;
+            }
+            @media (max-width: 320px) {
+                width: 153px;
+            }
         }
 
         .textFlex {
