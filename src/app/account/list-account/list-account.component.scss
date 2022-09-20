@@ -16,13 +16,6 @@
 
     .accountList {
 
-        .router {
-            margin-top: 29%;
-
-            @media (min-width: 768px) {
-                margin-top: 20%;
-            }
-        }
 
         .addAccount {
             display: flex;
@@ -30,6 +23,7 @@
             align-items: center;
             flex-direction: column;
             margin-left: 6px;
+            margin-top: 65px;
 
             h3 {
                 color: white;
@@ -43,6 +37,8 @@
             .btn {
                 box-sizing: border-box;
                 margin-top: 59px;
+
+             
 
                 a {
                     border-radius: 19px;
@@ -64,7 +60,13 @@
                     }
 
                 }
-
+                
+            }
+            .btn:hover {
+                transform: scale(1.040);
+                transition-duration: 1.0s;
+                transition-duration: 0.4s;
+                transition-property: opacity;
             }
 
             @media (max-width: 610px) {
@@ -81,12 +83,7 @@
         
         .table-flex {
 
-          /*   margin: 84px;
-
-            @media (min-width: 1024px) {
-                margin: 110px;
-            } */
-
+    
         .table {
             display: flex;
             justify-content: center;
