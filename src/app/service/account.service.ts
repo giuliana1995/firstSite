@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class AccountService {
 
   getPosts(): Observable<Account[]> {
     return this.http
-      .get<Account[]>(`https://vue-completecourse.firebaseio.com/posts.json`)
+      .get<Account[]>(`https://retoolapi.dev/KLmCaa/data`)
       .pipe(
         map((data) => {
           const posts: Account[] = [];

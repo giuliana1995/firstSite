@@ -37,6 +37,8 @@ import { CustomSerializer } from './store/router/custom-serializer';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
+
+
 @NgModule({
 
   declarations: [
@@ -50,7 +52,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     HomeCardsComponent,
     NavbarCardsComponent,
     FormListComponent,
-    SingleAccountComponent
+    SingleAccountComponent,
+    FormListComponent,
   ],
    
   imports: [

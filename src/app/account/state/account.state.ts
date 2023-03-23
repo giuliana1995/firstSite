@@ -13,15 +13,13 @@ export const initialState: PostsState = postsAdapter.getInitialState({
   count: 0,
 });
 
-export function sortByName(a: Account, b: Account): number {
+export function sortByName(a: Account, b: Account): number {  
   const compare = a.title.localeCompare(b.title);
   if (compare > 0) {
     return -1;
   }
-
   if (compare < 0) {
     return 1;
   }
-
   return compare;
 }

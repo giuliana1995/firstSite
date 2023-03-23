@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
   access: boolean = false;
   load: boolean = false;
   
-  form: FormGroup;
+  form!: FormGroup;
   
   constructor() {
     
@@ -34,7 +34,6 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 
   loader() {
     this.load = !this.load;
