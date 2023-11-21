@@ -9,8 +9,6 @@ export class ContainerComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-  
-
   constructor() { }
 
   ngOnInit(): void {
