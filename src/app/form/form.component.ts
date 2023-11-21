@@ -15,10 +15,8 @@ export class FormComponent implements OnInit {
   email = new FormControl("", [Validators.required]);
   password = new FormControl("", [Validators.required]);
 
-
   access: boolean = false;
   load: boolean = false;
-  
   form: FormGroup;
   
   constructor() {
@@ -35,7 +33,6 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   loader() {
     this.load = !this.load;
   }
@@ -44,42 +41,16 @@ export class FormComponent implements OnInit {
     this.access = !this.access;
     this.load = false;
   }
-
+  
   save(value: any) {
     console.log(value);
     setTimeout(() => {
     }, 1000);
     this.loader();
-
     setTimeout(() => {
       this.accessOccurred();
       this.name.reset();
       this.surname.reset();
     }, 3000);
   }
-
-
-  // controlName() {
-  //   let user = this.form.controls['name'].value;
-  //   if(user.length < 2) {
-  //     this.form.controls['name'].setErrors({ incorect: true}) 
-  //   } else {
-  //     this.form.controls['name'].setErrors(null)
-  //   }
-  // }
-
-  // send(): void {
-  //   if (!this.form.valid) {
-  //     console.log("campo obbligatorio");
-  //     return;
-  //   } else {
-  //     console.log(
-  //       this.form.controls['name'].value,
-  //       this.form.controls['email'].value,
-  //       this.form.controls['date'].value
-  //     );
-  //   }
-  //}
-
-
 }
