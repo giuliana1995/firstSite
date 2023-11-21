@@ -7,13 +7,11 @@
         <!-- Assegnamo al form una local varible #f che contiene una reference al nostro form -->
         <form #f="ngForm" [formGroup]="form" (ngSubmit)="save(f.value)">
     
-    
                 <div class="nome">
                     <label for="name" class="form-label">Nome:</label>
                     <input type="nome" placeholder="nome" class="form-control" name="nome" [formControl]="name">
                 </div>
                 <!-- per far si che i validator (required) siano applicati dobbiamo assegnare un attributo ngModel al nostro campo di input. Ng model è una ditrettiva che mette in binding ovvero sintonizza un qualsiasi campo di input checkbox select ecc.. con una proprietà-->
-        
                 <div>
                     <label for="surname" class="form-label">Cognome:</label>
                     <input type="cognome" placeholder="cognome" class="form-control" name="cognome" minlength="5" [formControl]="surname">
@@ -38,11 +36,9 @@
                 </div>
     
                 <div>
-    
                     <button type="submit" class="button" [disabled]="!name.valid || !surname.valid || load ">Invia</button>
                 </div>
             
-    
             <div id="load">
                 <mat-progress-spinner *ngIf="load && !access" mode="indeterminate"></mat-progress-spinner>
             </div>
@@ -53,7 +49,6 @@
             </div>
         </form>
     </div>
-
 </div>    
 
 <!--cambiare email e password in nome e cognome, simulare una chiamata a be con set timeout e nel frattempo che la chiamata va a buon fine inserire un loading, una volta terminata mosrtare un messaggio di caricamento avvenuto con successo -->
